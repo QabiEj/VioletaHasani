@@ -105,4 +105,32 @@ document.addEventListener('DOMContentLoaded', function () {
             this.reset();
         });
     }
+
+    // Fjalor për përkthime
+    const translations = {
+        en: {
+            hero_title: "Violeta Hasani Behluli",
+            hero_subtitle: "Legal Researcher & Academic",
+            hero_paragraph: "Specializing in Criminal Law with focus on Smuggling Offenses",
+            // shto më shumë çelësa dhe përkthime për secilin tekst...
+        },
+        sq: {
+            hero_title: "Violeta Hasani Behluli",
+            hero_subtitle: "Hulumtuese Ligjore & Akademike",
+            hero_paragraph: "Specializohem në Ligjin Penal me fokus në Krimet e Pirave",
+            // përkthe çdo tekst sipas nevojës...
+        }
+    };
+
+    function setLanguage(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if(translations[lang] && translations[lang][key]) {
+                el.textContent = translations[lang][key];
+            }
+        });
+    }
+
+    // Shto një ekzecutim fillestar, p.sh. në gjuhën angleze
+    setLanguage('en');
 });
