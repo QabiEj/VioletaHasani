@@ -109,13 +109,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Fjalor për përkthime
     const translations = {
         en: {
-            hero_title: "Violeta Hasani Behluli",
+            hero_title: "Violeta Hasani",
             hero_subtitle: "Legal Researcher & Academic",
             hero_paragraph: "Specializing in Criminal Law with focus on Smuggling Offenses",
             // shto më shumë çelësa...
         },
         sq: {
-            hero_title: "Violeta Hasani Behluli",
+            hero_title: "Violeta Hasani",
             hero_subtitle: "Hulumtuese Ligjore & Akademike",
             hero_paragraph: "Specializohem në Ligjin Penal me fokus në Krimet e Pirave",
             // përkthe çdo tekst sipas nevojës
