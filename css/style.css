@@ -169,6 +169,27 @@ nav ul li a.active::after {
     color: var(--primary-color);
 }
 
+.language-toggle {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.language-toggle button {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: background-color 0.3s;
+}
+
+.language-toggle button:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
 /* Hero Section */
 .hero {
     padding: 150px 0 80px;
