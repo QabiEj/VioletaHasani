@@ -109,31 +109,61 @@ document.addEventListener('DOMContentLoaded', function () {
     // Fjalor për përkthime
     const translations = {
         en: {
-            hero_title: "Violeta Hasani",
+            // Navbar
+            nav_home: "Home",
+            nav_research: "Research",
+            nav_publications: "Publications",
+            nav_academic: "Academic Background",
+            nav_contact: "Contact",
+            
+            // Hero section
+            hero_title: "Violeta Hasani Behluli",
             hero_subtitle: "Legal Researcher & Academic",
             hero_paragraph: "Specializing in Criminal Law with focus on Smuggling Offenses",
-            // shto më shumë çelësa...
+            view_research: "View Research",
+            contact_me: "Contact Me",
+            
+            // About section
+            about_title: "About Me",
+            // Add more translations for all text content...
         },
         sq: {
-            hero_title: "Violeta Hasani",
+            // Navbar
+            nav_home: "Ballina",
+            nav_research: "Hulumtimi",
+            nav_publications: "Publikimet",
+            nav_academic: "Edukimi Akademik",
+            nav_contact: "Kontakti",
+            
+            // Hero section
+            hero_title: "Violeta Hasani Behluli",
             hero_subtitle: "Hulumtuese Ligjore & Akademike",
-            hero_paragraph: "Specializohem në Ligjin Penal me fokus në Krimet e Pirave",
-            // përkthe çdo tekst sipas nevojës
+            hero_paragraph: "E specializuar në Ligjin Penal me fokus në Veprat e Kontrabandës",
+            view_research: "Shiko Hulumtimin",
+            contact_me: "Më Kontakto",
+            
+            // About section
+            about_title: "Rreth Meje",
+            // Add more translations here...
         }
     };
 
-    function setLanguage(lang) {
+    window.setLanguage = function(lang) {
+        console.log("Setting language to:", lang); // For debugging
+        
+        // Store the selected language in local storage
+        localStorage.setItem('selectedLanguage', lang);
+        
+        // Update elements with data-i18n attribute
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (translations[lang] && translations[lang][key]) {
                 el.textContent = translations[lang][key];
             }
         });
-    }
+    };
 
-    // Ekspoto funksionin në objektin global
-    window.setLanguage = setLanguage;
-
-    // Vendos gjuhën fillestare, p.sh. angleze
-    setLanguage('en');
+    // Initialize with the saved language or default to English
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    setLanguage(savedLanguage);
 });
