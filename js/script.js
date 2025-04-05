@@ -147,7 +147,62 @@ document.addEventListener('DOMContentLoaded', function () {
             research_area5: "Comparative analysis with smuggling legislation in Slovenia, Albania, Montenegro, Serbia, and Croatia",
             research_area6: "Criminological aspects including phenomenology and etiology of smuggling offenses",
             research_area7: "Preventive and repressive measures for combating smuggling crimes",
-            request_research: "Request Full Research"
+            request_research: "Request Full Research",
+            
+            // Publications section
+            publications_title: "Publications",
+            publication1_title: "Legal Aspects of Smuggling Offenses in Kosovo",
+            publication1_meta: "Journal of Criminal Law Studies, 2018",
+            publication1_description: "An analysis of the legal framework governing smuggling offenses in Kosovo, examining the Criminal Code and Customs Code provisions.",
+            publication2_title: "Criminological Analysis of Smuggling in Northern Kosovo",
+            publication2_meta: "Balkans Journal of Security Studies, 2019",
+            publication2_description: "A comprehensive criminological study of smuggling patterns in northern Kosovo, including statistical analysis of cases from 2008-2011.",
+            publication3_title: "Preventive Measures Against Smuggling in the Western Balkans",
+            publication3_meta: "European Journal of Criminal Policy, 2020",
+            publication3_description: "A comparative analysis of preventive measures employed to combat smuggling across Western Balkan countries.",
+            read_more: "Read More",
+            
+            // Academic Background section
+            academic_title: "Academic Background",
+            academic1_title: "Master of Laws in Criminal Law",
+            academic1_date: "2016 - 2018",
+            academic1_location: "University of Prishtina, Kosovo",
+            academic1_description: "Completed master's thesis on smuggling offenses under the mentorship of Prof. Dr. Azem Hajdari.",
+            academic2_title: "Bachelor of Laws",
+            academic2_date: "2012 - 2016",
+            academic2_location: "University of Prishtina, Kosovo",
+            academic2_description: "Focused on criminal law and international law courses. Graduated with honors.",
+            academic3_title: "Legal Research Training",
+            academic3_date: "Summer 2017",
+            academic3_location: "European University Institute, Florence, Italy",
+            academic3_description: "Intensive summer program on legal research methodologies and comparative criminal law.",
+            
+            // Contact section
+            contact_title: "Contact Me",
+            contact_get_in_touch: "Get in Touch",
+            contact_paragraph: "If you're interested in my research, academic collaborations, or have inquiries about my work, please feel free to contact me using the form or through the following contact details:",
+            contact_email: "violeta.hasani@example.com",
+            contact_phone: "+383 XX XXX XXX",
+            contact_address: "Faculty of Law, University of Prishtina, Kosovo",
+            contact_form_name: "Name",
+            contact_form_email: "Email",
+            contact_form_subject: "Subject",
+            contact_form_message: "Message",
+            contact_form_submit: "Send Message",
+            
+            // Footer section
+            footer_logo_title: "Violeta Hasani",
+            footer_logo_subtitle: "Legal Researcher & Academic",
+            footer_links_title: "Quick Links",
+            footer_link_home: "Home",
+            footer_link_research: "Research",
+            footer_link_publications: "Publications",
+            footer_link_academic: "Academic Background",
+            footer_link_contact: "Contact",
+            footer_newsletter_title: "Stay Updated",
+            footer_newsletter_paragraph: "Subscribe to receive updates on my latest research and publications",
+            footer_newsletter_submit: "Subscribe",
+            footer_bottom: "© 2025 Violeta Hasani. All rights reserved."
         },
         sq: {
             // Navbar
@@ -188,17 +243,72 @@ document.addEventListener('DOMContentLoaded', function () {
             research_area5: "Analizë krahasuese me legjislacionin e kontrabandës në Slloveni, Shqipëri, Mal të Zi, Serbi dhe Kroaci",
             research_area6: "Aspektet kriminologjike përfshirë fenomenologjinë dhe etiologjinë e veprave të kontrabandës",
             research_area7: "Masat parandaluese dhe represive për luftimin e krimeve të kontrabandës",
-            request_research: "Kërko Hulumtimin e Plotë"
+            request_research: "Kërko Hulumtimin e Plotë",
+            
+            // Publications section
+            publications_title: "Publikimet",
+            publication1_title: "Aspektet Ligjore të Krimeve të Kontrabandës në Kosovë",
+            publication1_meta: "Revista e Studimeve të Ligjit Penal, 2018",
+            publication1_description: "Një analizë e kornizës ligjore që rregullon veprat e kontrabandës në Kosovë, duke shqyrtuar dispozitat e Kodit Penal dhe të Kodit Doganor.",
+            publication2_title: "Analiza Kriminologjike e Kontrabandës në Veri të Kosovës",
+            publication2_meta: "Revista e Studimeve të Sigurisë në Ballkan, 2019",
+            publication2_description: "Një studim gjithëpërfshirës kriminologjik i modeleve të kontrabandës në veri të Kosovës, përfshirë analizën statistikore të rasteve nga 2008-2011.",
+            publication3_title: "Masat Parandaluese Kundër Kontrabandës në Ballkanin Perëndimor",
+            publication3_meta: "Revista Evropiane e Politikës Penale, 2020",
+            publication3_description: "Një analizë krahasuese e masave parandaluese të përdorura për të luftuar kontrabandën në vendet e Ballkanit Perëndimor.",
+            read_more: "Lexo Më Shumë",
+            
+            // Academic Background section
+            academic_title: "Edukimi Akademik",
+            academic1_title: "Master në Ligjin Penal",
+            academic1_date: "2016 - 2018",
+            academic1_location: "Universiteti i Prishtinës, Kosovë",
+            academic1_description: "Përfundova tezën e masterit mbi krimet e kontrabandës nën mentorimin e Prof. Dr. Azem Hajdari.",
+            academic2_title: "Bachelor në Ligje",
+            academic2_date: "2012 - 2016",
+            academic2_location: "Universiteti i Prishtinës, Kosovë",
+            academic2_description: "Fokus në ligjin penal dhe ligjin ndërkombëtar. U diplomova me lavdërime.",
+            academic3_title: "Trajnim në Hulumtimin Ligjor",
+            academic3_date: "Veri 2017",
+            academic3_location: "Instituti Evropian i Universitetit, Florence, Itali",
+            academic3_description: "Program intensiv veror mbi metodologjitë e hulumtimit ligjor dhe ligjin krahasues penal.",
+            
+            // Contact section
+            contact_title: "Kontakti",
+            contact_get_in_touch: "Lidhu me Mua",
+            contact_paragraph: "Nëse jeni të interesuar për hulumtimin tim, bashkëpunime akademike, ose keni pyetje rreth punës sime, ju lutem kontaktoni me mua përmes formularit ose me anë të detajeve të mëposhtme:",
+            contact_email: "violeta.hasani@example.com",
+            contact_phone: "+383 XX XXX XXX",
+            contact_address: "Fakulteti i Drejtësisë, Universiteti i Prishtinës, Kosovë",
+            contact_form_name: "Emri",
+            contact_form_email: "Email",
+            contact_form_subject: "Subjekti",
+            contact_form_message: "Mesazhi",
+            contact_form_submit: "Dërgo Mesazhin",
+            
+            // Footer section
+            footer_logo_title: "Violeta Hasani",
+            footer_logo_subtitle: "Hulumtuese Ligjore & Akademike",
+            footer_links_title: "Lidhje të Shpejta",
+            footer_link_home: "Ballina",
+            footer_link_research: "Hulumtimi",
+            footer_link_publications: "Publikimet",
+            footer_link_academic: "Edukimi Akademik",
+            footer_link_contact: "Kontakti",
+            footer_newsletter_title: "Qëndro i Informuar",
+            footer_newsletter_paragraph: "Abonohu për të marrë lajmet e fundit mbi hulumtimin dhe publikimet e mia",
+            footer_newsletter_submit: "Abono",
+            footer_bottom: "© 2025 Violeta Hasani. Të gjitha të drejtat janë të rezervuara."
         }
     };
 
     window.setLanguage = function(lang) {
         console.log("Setting language to:", lang); // For debugging
         
-        // Store the selected language in local storage
+        // Ruaj gjuhën e zgjedhur në local storage
         localStorage.setItem('selectedLanguage', lang);
         
-        // Update elements with data-i18n attribute
+        // Përditëso elementet me atributin data-i18n
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (translations[lang] && translations[lang][key]) {
