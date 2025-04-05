@@ -274,6 +274,7 @@ nav ul li a.active::after {
 /* Research Section */
 .research {
     background-color: #f9f7fa;
+    padding: 80px 0 40px; /* Reduced bottom padding */
 }
 
 .research-spotlight {
@@ -406,6 +407,7 @@ nav ul li a.active::after {
 /* Academic Section */
 .academic {
     background-color: #f9f7fa;
+    padding: 40px 0 80px; /* Reduced top padding */
 }
 
 .timeline {
@@ -519,7 +521,7 @@ nav ul li a.active::after {
     margin-right: 15px;
 }
 
-.social-links {
+social-links {
     display: flex;
     gap: 15px;
 }
