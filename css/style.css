@@ -193,7 +193,7 @@ nav ul li a.active::after {
 /* Hero Section */
 .hero {
     padding: 150px 0 80px;
-    background: linear-gradient(to right, #f8f5f9, #eee5eb);
+    background-color: var(--accent-color);
 }
 
 .hero .container {
@@ -340,7 +340,7 @@ nav ul li a.active::after {
 
 /* Publications Section */
 .publications {
-    background-color: white;
+    background-color: var(--accent-color);
 }
 
 .publications-grid {
@@ -482,7 +482,7 @@ nav ul li a.active::after {
 
 /* Contact Section */
 .contact {
-    background-color: #f5f5f5;  /* Change the background to create contrast */
+    background-color: var(--accent-color);
     padding: 80px 0;
 }
 
