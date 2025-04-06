@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Define API base URL based on environment
     const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-        ? 'http://localhost:3000'
+        ? 'http://localhost:8888/.netlify/functions'
         : 'https://violetahasani.netlify.app/.netlify/functions';
 
     // Handle Contact Form Submission
@@ -135,6 +135,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Reset button state
                 submitButton.textContent = originalText;
                 submitButton.disabled = false;
+            });
+        });
+    }
+
+    // Add this after your contactForm code
+    const testFunctionButton = document.getElementById('testFunction');
+    if (testFunctionButton) {
+        testFunctionButton.addEventListener('click', function() {
+            fetch(`${API_BASE_URL}/test`, {
+                method: 'GET'
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Test function response:', data);
+                alert('Test response: ' + JSON.stringify(data));
+            })
+            .catch(error => {
+                console.error('Test error:', error);
+                alert('Test error: ' + error.message);
             });
         });
     }
