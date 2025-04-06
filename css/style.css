@@ -406,10 +406,11 @@ nav ul li a.active::after {
 
 /* Academic Section */
 .academic {
-    background-color: white; /* Changed from #f9f7fa to white */
+    background-color: white;
     padding: 40px 0 80px;
-    border-top: 5px solid var(--accent-color); /* Added top border for separation */
-    margin-top: -20px; /* Optional: Adjust to overlap the border if needed */
+    border-top: 5px solid var(--accent-color);
+    margin-top: -20px; /* adjust if necessary */
+    margin-bottom: 60px;  /* Added bottom margin to create separation */
 }
 
 .timeline {
@@ -482,7 +483,9 @@ nav ul li a.active::after {
 
 /* Contact Section */
 .contact {
-    background-color: white;
+    background-color: #f5f5f5;  /* Change the background to create contrast */
+    padding: 80px 0;
+    border-top: 5px solid var(--accent-color); /* Optional border for separation */
 }
 
 .contact-content {
