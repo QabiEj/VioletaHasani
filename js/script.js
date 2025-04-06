@@ -86,6 +86,23 @@ document.addEventListener('DOMContentLoaded', function () {
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
             
+            // Create error display element if it doesn't exist
+            let errorDisplay = document.getElementById('contact-error-message');
+            if (!errorDisplay) {
+                errorDisplay = document.createElement('div');
+                errorDisplay.id = 'contact-error-message';
+                errorDisplay.style.color = 'red';
+                errorDisplay.style.marginTop = '15px';
+                errorDisplay.style.padding = '10px';
+                errorDisplay.style.borderRadius = '5px';
+                errorDisplay.style.backgroundColor = 'rgba(255,0,0,0.1)';
+                errorDisplay.style.display = 'none';
+                contactForm.appendChild(errorDisplay);
+            }
+            
+            // Clear previous error
+            errorDisplay.style.display = 'none';
+            
             // Send data to server
             fetch(`${API_BASE_URL}/contact`, {
                 method: 'POST',
@@ -94,18 +111,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 body: JSON.stringify({ name, email, subject, message }),
             })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Server returned ${response.status}: ${response.statusText}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 if (data.success) {
                     alert(data.message);
                     contactForm.reset();
                 } else {
-                    alert(data.message);
+                    errorDisplay.textContent = data.message || 'An error occurred. Please try again later.';
+                    errorDisplay.style.display = 'block';
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('An error occurred. Please try again later.');
+                errorDisplay.textContent = `Error: ${error.message}`;
+                errorDisplay.style.display = 'block';
             })
             .finally(() => {
                 // Reset button state
@@ -135,6 +159,23 @@ document.addEventListener('DOMContentLoaded', function () {
             submitButton.textContent = 'Subscribing...';
             submitButton.disabled = true;
             
+            // Create error display element if it doesn't exist
+            let errorDisplay = document.getElementById('newsletter-error-message');
+            if (!errorDisplay) {
+                errorDisplay = document.createElement('div');
+                errorDisplay.id = 'newsletter-error-message';
+                errorDisplay.style.color = 'red';
+                errorDisplay.style.marginTop = '15px';
+                errorDisplay.style.padding = '10px';
+                errorDisplay.style.borderRadius = '5px';
+                errorDisplay.style.backgroundColor = 'rgba(255,0,0,0.1)';
+                errorDisplay.style.display = 'none';
+                this.appendChild(errorDisplay);
+            }
+            
+            // Clear previous error
+            errorDisplay.style.display = 'none';
+            
             // Send data to server
             fetch(`${API_BASE_URL}/subscribe`, {
                 method: 'POST',
@@ -143,18 +184,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 body: JSON.stringify({ email }),
             })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Server returned ${response.status}: ${response.statusText}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 if (data.success) {
                     alert(data.message);
                     this.reset();
                 } else {
-                    alert(data.message);
+                    errorDisplay.textContent = data.message || 'An error occurred. Please try again later.';
+                    errorDisplay.style.display = 'block';
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('An error occurred. Please try again later.');
+                errorDisplay.textContent = `Error: ${error.message}`;
+                errorDisplay.style.display = 'block';
             })
             .finally(() => {
                 // Reset button state

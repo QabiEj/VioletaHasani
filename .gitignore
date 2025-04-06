@@ -1,0 +1,19 @@
+# dependencies
+/node_modules
+/functions/node_modules
+
+# environment variables
+.env
+.env.local
+
+# build files
+/dist
+/build
+
+# misc
+.DS_Store
+.vscode/
+*.log
+npm-debug.log*
+# Local Netlify folder
+.netlify
