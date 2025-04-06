@@ -515,7 +515,7 @@ nav ul li a.active::after {
 .contact-item i {
     width: 40px;
     height: 40px;
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: white;
     border-radius: 50%;
     display: flex;
