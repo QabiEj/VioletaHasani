@@ -408,7 +408,6 @@ nav ul li a.active::after {
 .academic {
     background-color: white;
     padding: 40px 0 80px;
-    border-top: 5px solid var(--accent-color);
     margin-top: -20px; /* adjust if necessary */
     margin-bottom: 60px;  /* Added bottom margin to create separation */
 }
@@ -485,7 +484,6 @@ nav ul li a.active::after {
 .contact {
     background-color: #f5f5f5;  /* Change the background to create contrast */
     padding: 80px 0;
-    border-top: 5px solid var(--accent-color); /* Optional border for separation */
 }
 
 .contact-content {
