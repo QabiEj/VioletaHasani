@@ -79,7 +79,7 @@ exports.handler = async function(event, context) {
         <p>Please choose one of the following payment options:</p>
         <ul>
           <li>
-            <strong>PayPal:</strong> Click <a href="https://paypal.me/your_paypal_link" target="_blank">here</a> to complete your payment.
+            <strong>PayPal:</strong> Click <a href="paypal.me/shabanejupi5" target="_blank">here</a> to complete your payment.
           </li>
           <li>
             <strong>Bank Transfer:</strong> Bank transfer details will be provided shortly.
