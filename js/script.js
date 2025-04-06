@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Footer section
             footer_logo_title: "Violeta Hasani",
             footer_logo_subtitle: "Hulumtuese Ligjore & Akademike",
-            footer_links_title: "Linqe të shpejta",
+            footer_links_title: "Lidhje të shpejta",
             footer_link_home: "Ballina",
             footer_link_research: "Hulumtimi",
             footer_link_publications: "Publikimet",
