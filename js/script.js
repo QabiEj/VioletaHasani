@@ -112,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // Navbar
             nav_home: "Home",
             nav_research: "Research",
-            nav_publications: "Publications",
             nav_academic: "Academic Background",
             nav_contact: "Contact",
             
@@ -148,20 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
             research_area6: "Criminological aspects including phenomenology and etiology of smuggling offenses",
             research_area7: "Preventive and repressive measures for combating smuggling crimes",
             request_research: "Request Full Research",
-            
-            // Publications section
-            publications_title: "Publications",
-            publication1_title: "Legal Aspects of Smuggling Offenses in Kosovo",
-            publication1_meta: "Journal of Criminal Law Studies, 2018",
-            publication1_description: "An analysis of the legal framework governing smuggling offenses in Kosovo, examining the Criminal Code and Customs Code provisions.",
-            publication2_title: "Criminological Analysis of Smuggling in Northern Kosovo",
-            publication2_meta: "Balkans Journal of Security Studies, 2019",
-            publication2_description: "A comprehensive criminological study of smuggling patterns in northern Kosovo, including statistical analysis of cases from 2008-2011.",
-            publication3_title: "Preventive Measures Against Smuggling in the Western Balkans",
-            publication3_meta: "European Journal of Criminal Policy, 2020",
-            publication3_description: "A comparative analysis of preventive measures employed to combat smuggling across Western Balkan countries.",
-            read_more: "Read More",
-            
+
             // Academic Background section
             academic_title: "Academic Background",
             academic1_title: "Master of Laws in Criminal Law",
@@ -208,7 +194,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // Navbar
             nav_home: "Ballina",
             nav_research: "Hulumtimi",
-            nav_publications: "Publikimet",
             nav_academic: "Edukimi Akademik",
             nav_contact: "Kontakti",
             
@@ -244,20 +229,7 @@ document.addEventListener('DOMContentLoaded', function () {
             research_area6: "Aspektet kriminologjike përfshirë fenomenologjinë dhe etiologjinë e veprave të kontrabandës",
             research_area7: "Masat parandaluese dhe represive për luftimin e krimeve të kontrabandës",
             request_research: "Kërko Hulumtimin e Plotë",
-            
-            // Publications section
-            publications_title: "Publikimet",
-            publication1_title: "Aspektet Ligjore të Krimeve të Kontrabandës në Kosovë",
-            publication1_meta: "Revista e Studimeve të Ligjit Penal, 2018",
-            publication1_description: "Një analizë e kornizës ligjore që rregullon veprat e kontrabandës në Kosovë, duke shqyrtuar dispozitat e Kodit Penal dhe të Kodit Doganor.",
-            publication2_title: "Analiza Kriminologjike e Kontrabandës në Veri të Kosovës",
-            publication2_meta: "Revista e Studimeve të Sigurisë në Ballkan, 2019",
-            publication2_description: "Një studim gjithëpërfshirës kriminologjik i modeleve të kontrabandës në veri të Kosovës, përfshirë analizën statistikore të rasteve nga 2008-2011.",
-            publication3_title: "Masat Parandaluese Kundër Kontrabandës në Ballkanin Perëndimor",
-            publication3_meta: "Revista Evropiane e Politikës Penale, 2020",
-            publication3_description: "Një analizë krahasuese e masave parandaluese të përdorura për të luftuar kontrabandën në vendet e Ballkanit Perëndimor.",
-            read_more: "Lexo Më Shumë",
-            
+
             // Academic Background section
             academic_title: "Edukimi Akademik",
             academic1_title: "Master në Ligjin Penal",
@@ -297,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function () {
             footer_link_contact: "Kontakti",
             footer_newsletter_title: "Qëndro i Informuar",
             footer_newsletter_paragraph: "Abonohu për të marrë lajmet e fundit mbi hulumtimin dhe publikimet e mia",
-            footer_newsletter_submit: "Abono",
+            footer_newsletter_submit: "Abonohu",
             footer_bottom: "© 2025 Violeta Hasani. Të gjitha të drejtat janë të rezervuara."
         }
     };
