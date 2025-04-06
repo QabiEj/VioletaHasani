@@ -3,7 +3,7 @@
     --primary-color: #5d4954;
     --secondary-color: #8a7e88;
     --accent-color: #c19f9f;
-    --light-color: #f5f5f5;
+    --light-color: #f9f7fa;
     --dark-color: #333;
     --text-color: #444;
     --heading-font: 'Playfair Display', serif;
@@ -64,6 +64,17 @@ img {
     font-size: 2.5rem;
     margin-bottom: 15px;
     color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 60px;
+    background-color: var(--accent-color);
+    margin: 15px auto 0;
 }
 
 .underline {
@@ -74,7 +85,19 @@ img {
 }
 
 section {
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding: 80px 0;
+}
+
+section::before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+    opacity: 0.2;
+    margin-top: -80px;
 }
 
 .btn {
@@ -185,15 +208,15 @@ nav ul li a.active::after {
     transition: background-color 0.3s;
 }
 
-.language-toggle button:hover {
+language-toggle button:hover {
     background-color: var(--accent-color);
     color: white;
 }
 
 /* Hero Section */
 .hero {
+    background: linear-gradient(to bottom, rgba(193, 159, 159, 0.3), white);
     padding: 150px 0 80px;
-    background-color: var(--accent-color);
 }
 
 .hero .container {
@@ -232,7 +255,8 @@ nav ul li a.active::after {
 }
 
 .hero-image img {
-    border-radius: 15px;
+    border-radius: 10px;
+    border: 3px solid rgba(193, 159, 159, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -267,14 +291,25 @@ nav ul li a.active::after {
 }
 
 .about-image img {
-    border-radius: 15px;
+    border-radius: 10px;
+    border: 3px solid rgba(193, 159, 159, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Research Section */
 .research {
-    background-color: #f9f7fa;
+    background-color: rgba(193, 159, 159, 0.1);
     padding: 80px 0 40px; /* Reduced bottom padding */
+}
+
+.research::before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+    opacity: 0.3;
+    margin-top: -80px;
 }
 
 .research-spotlight {
@@ -285,7 +320,8 @@ nav ul li a.active::after {
 }
 
 .research-image img {
-    border-radius: 15px;
+    border-radius: 10px;
+    border: 3px solid rgba(193, 159, 159, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -312,7 +348,7 @@ nav ul li a.active::after {
     margin-right: 8px;
 }
 
-.research-description {
+research-description {
     margin-bottom: 20px;
     font-size: 1.05rem;
 }
@@ -407,9 +443,20 @@ nav ul li a.active::after {
 /* Academic Section */
 .academic {
     background-color: white;
-    padding: 40px 0 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     margin-top: -20px; /* adjust if necessary */
     margin-bottom: 60px;  /* Added bottom margin to create separation */
+}
+
+.academic::before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+    opacity: 0.3;
+    margin-top: -80px;
 }
 
 .timeline {
@@ -482,8 +529,18 @@ nav ul li a.active::after {
 
 /* Contact Section */
 .contact {
-    background-color: var(--accent-color);
+    background: linear-gradient(to bottom, white, rgba(193, 159, 159, 0.3));
     padding: 80px 0;
+}
+
+.contact::before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+    opacity: 0.3;
+    margin-top: -80px;
 }
 
 .contact-content {
@@ -515,8 +572,8 @@ nav ul li a.active::after {
 .contact-item i {
     width: 40px;
     height: 40px;
-    background-color: var(--accent-color);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -547,7 +604,8 @@ social-links {
 }
 
 .contact-form {
-    background-color: #f9f7fa;
+    background-color: white;
+    border-left: 3px solid var(--accent-color);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -581,6 +639,7 @@ footer {
     background-color: var(--primary-color);
     color: white;
     padding: 60px 0 20px;
+    border-top: 5px solid var(--accent-color);
 }
 
 .footer-content {
@@ -686,6 +745,14 @@ footer {
 }
 
 @media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+    
+    .hero {
+        padding: 120px 0 60px;
+    }
+    
     .menu-toggle {
         display: block;
     }
