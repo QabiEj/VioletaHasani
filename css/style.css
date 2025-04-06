@@ -406,8 +406,10 @@ nav ul li a.active::after {
 
 /* Academic Section */
 .academic {
-    background-color: #f9f7fa;
-    padding: 40px 0 80px; /* Reduced top padding */
+    background-color: white; /* Changed from #f9f7fa to white */
+    padding: 40px 0 80px;
+    border-top: 5px solid var(--accent-color); /* Added top border for separation */
+    margin-top: -20px; /* Optional: Adjust to overlap the border if needed */
 }
 
 .timeline {
