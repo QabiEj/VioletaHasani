@@ -56,6 +56,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     
+    // Define API base URL based on environment
+    const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+        ? 'http://localhost:3000'
+        : 'https://violetahasani.netlify.app/.netlify/functions';
+
     // Handle Contact Form Submission
     const contactForm = document.getElementById('contactForm');
     
@@ -75,12 +80,38 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
             
-            // Here you would normally send the data to a server
-            // For now, let's just show a success message
-            alert('Thank you for your message! I will get back to you soon.');
+            // Show loading state
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
             
-            // Reset the form
-            contactForm.reset();
+            // Send data to server
+            fetch(`${API_BASE_URL}/contact`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, subject, message }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    contactForm.reset();
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            })
+            .finally(() => {
+                // Reset button state
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            });
         });
     }
     
@@ -98,11 +129,38 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
             
-            // Here you would normally send the data to a server
-            alert('Thank you for subscribing to my newsletter!');
+            // Show loading state
+            const submitButton = this.querySelector('button');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Subscribing...';
+            submitButton.disabled = true;
             
-            // Reset the form
-            this.reset();
+            // Send data to server
+            fetch(`${API_BASE_URL}/subscribe`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    this.reset();
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            })
+            .finally(() => {
+                // Reset button state
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            });
         });
     }
 
@@ -116,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
             nav_contact: "Contact",
             
             // Hero section
-            hero_title: "Violeta Hasani Behluli",
+            hero_title: "Violeta Hasani",
             hero_subtitle: "Legal Researcher & Academic",
             hero_paragraph: "Specializing in Criminal Law with focus on Smuggling Offenses",
             view_research: "View Research",
@@ -198,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function () {
             nav_contact: "Kontakti",
             
             // Hero section
-            hero_title: "Violeta Hasani Behluli",
+            hero_title: "Violeta Hasani",
             hero_subtitle: "Hulumtuese Ligjore & Akademike",
             hero_paragraph: "E specializuar në Ligjin Penal me fokus në veprat e kontrabandës",
             view_research: "Shiko Hulumtimin",
