@@ -1,8 +1,0 @@
-{
-  "name": "violeta-hasani-functions",
-  "version": "1.0.0",
-  "description": "Netlify Functions for Violeta Hasani's portfolio",
-  "dependencies": {
-    "nodemailer": "^6.9.9"
-  }
-}
