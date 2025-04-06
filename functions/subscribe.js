@@ -59,7 +59,9 @@ exports.handler = async function(event, context) {
       subject: 'Subscription Confirmation',
       html: `
         <h3>Thank you for subscribing!</h3>
-        <p>You have successfully subscribed to receive updates on my latest research and publications.</p>
+        <p>Dear Subscriber,</p>
+        <p>Thank you for subscribing to my newsletter. You will now receive updates about my latest research and publications in criminal law with a focus on smuggling offenses.</p>
+        <p>If you're interested in my research paper "Smuggling as a Criminal Offense with Special Focus on the Territory of the Basic Court of Mitrovica 2008-2011", it is available for purchase at a price of 50€. Please contact me for more information.</p>
         <p>Best regards,<br>Violeta Hasani<br>Legal Researcher & Academic</p>
       `
     };

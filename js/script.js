@@ -138,25 +138,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-
-    // Add this after your contactForm code
-    const testFunctionButton = document.getElementById('testFunction');
-    if (testFunctionButton) {
-        testFunctionButton.addEventListener('click', function() {
-            fetch(`${API_BASE_URL}/test`, {
-                method: 'GET'
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Test function response:', data);
-                alert('Test response: ' + JSON.stringify(data));
-            })
-            .catch(error => {
-                console.error('Test error:', error);
-                alert('Test error: ' + error.message);
-            });
-        });
-    }
     
     // Newsletter form submission
     const newsletterForm = document.querySelector('.newsletter-form');

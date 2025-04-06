@@ -44,7 +44,7 @@ exports.handler = async function(event, context) {
     
     console.log('SMTP connection verified successfully');
     
-    // Prepare email content
+    // Prepare email content with more professional format
     const mailOptions = {
       from: `"Contact Form" <${process.env.EMAIL_USER}>`,
       replyTo: email,
@@ -65,16 +65,28 @@ exports.handler = async function(event, context) {
     const info = await transporter.sendMail(mailOptions);
     console.log('Email sent successfully:', info.messageId);
     
-    // Send confirmation email to the sender
+    // Send confirmation email to the sender with payment information for research
     console.log('Sending confirmation email...');
     const confirmationMail = {
       from: `"Violeta Hasani" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: 'Thank you for your message',
       html: `
-        <h3>Thank you for contacting me!</h3>
+        <h3>Thank You for Your Interest!</h3>
         <p>Dear ${name},</p>
-        <p>I appreciate your message. I will review it and get back to you as soon as possible.</p>
+        <p>Thank you for your interest in my research paper "Smuggling as a Criminal Offense with Special Focus on the Territory of the Basic Court of Mitrovica 2008-2011".</p>
+        <p>The paper is available for purchase at a price of 50€.</p>
+        <p>Please choose one of the following payment options:</p>
+        <ul>
+          <li>
+            <strong>PayPal:</strong> Click <a href="https://paypal.me/your_paypal_link" target="_blank">here</a> to complete your payment.
+          </li>
+          <li>
+            <strong>Bank Transfer:</strong> Bank transfer details will be provided shortly.
+          </li>
+        </ul>
+        <p>After making your payment, please reply to this email with proof of payment so that I can send you the full research paper within 24 hours.</p>
+        <p>If you have any questions, feel free to contact me at ${process.env.EMAIL_USER}.</p>
         <p>Best regards,<br>Violeta Hasani<br>Legal Researcher & Academic</p>
       `
     };
