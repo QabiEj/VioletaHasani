@@ -55,6 +55,12 @@ img {
     padding: 0 20px;
 }
 
+/* Section Styling */
+section {
+    padding: 80px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .section-header {
     text-align: center;
     margin-bottom: 50px;
@@ -77,29 +83,7 @@ img {
     margin: 15px auto 0;
 }
 
-.underline {
-    height: 3px;
-    width: 80px;
-    background-color: var(--accent-color);
-    margin: 0 auto;
-}
-
-section {
-    background-color: white;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding: 80px 0;
-}
-
-section::before {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: linear-gradient(to right, transparent, var(--accent-color), transparent);
-    opacity: 0.2;
-    margin-top: -80px;
-}
-
+/* Button Styles */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -208,14 +192,14 @@ nav ul li a.active::after {
     transition: background-color 0.3s;
 }
 
-language-toggle button:hover {
+.language-toggle button:hover {
     background-color: var(--accent-color);
     color: white;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(to bottom, rgba(193, 159, 159, 0.3), white);
+    background-color: var(--accent-color);
     padding: 150px 0 80px;
 }
 
@@ -235,13 +219,13 @@ language-toggle button:hover {
 .hero-content h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: var(--secondary-color);
+    color: white;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    color: var(--secondary-color);
+    color: white;
 }
 
 .cta-buttons {
@@ -256,8 +240,7 @@ language-toggle button:hover {
 
 .hero-image img {
     border-radius: 10px;
-    border: 3px solid rgba(193, 159, 159, 0.2);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* About Section */
@@ -292,24 +275,13 @@ language-toggle button:hover {
 
 .about-image img {
     border-radius: 10px;
-    border: 3px solid rgba(193, 159, 159, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Research Section */
 .research {
-    background-color: rgba(193, 159, 159, 0.1);
-    padding: 80px 0 40px; /* Reduced bottom padding */
-}
-
-.research::before {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: linear-gradient(to right, transparent, var(--accent-color), transparent);
-    opacity: 0.3;
-    margin-top: -80px;
+    background-color: var(--light-color);
+    padding: 80px 0;
 }
 
 .research-spotlight {
@@ -321,7 +293,6 @@ language-toggle button:hover {
 
 .research-image img {
     border-radius: 10px;
-    border: 3px solid rgba(193, 159, 159, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -348,7 +319,7 @@ language-toggle button:hover {
     margin-right: 8px;
 }
 
-research-description {
+.research-description {
     margin-bottom: 20px;
     font-size: 1.05rem;
 }
@@ -377,6 +348,15 @@ research-description {
 /* Publications Section */
 .publications {
     background-color: var(--accent-color);
+    padding: 80px 0;
+}
+
+.publications .section-header h2 {
+    color: white;
+}
+
+.publications .section-header h2::after {
+    background-color: white;
 }
 
 .publications-grid {
@@ -443,20 +423,7 @@ research-description {
 /* Academic Section */
 .academic {
     background-color: white;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    margin-top: -20px; /* adjust if necessary */
-    margin-bottom: 60px;  /* Added bottom margin to create separation */
-}
-
-.academic::before {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: linear-gradient(to right, transparent, var(--accent-color), transparent);
-    opacity: 0.3;
-    margin-top: -80px;
+    padding: 80px 0;
 }
 
 .timeline {
@@ -504,7 +471,7 @@ research-description {
 
 .timeline-content {
     padding: 20px;
-    background-color: white;
+    background-color: var(--light-color);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
@@ -529,18 +496,16 @@ research-description {
 
 /* Contact Section */
 .contact {
-    background: linear-gradient(to bottom, white, rgba(193, 159, 159, 0.3));
+    background-color: var(--accent-color);
     padding: 80px 0;
 }
 
-.contact::before {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: linear-gradient(to right, transparent, var(--accent-color), transparent);
-    opacity: 0.3;
-    margin-top: -80px;
+.contact .section-header h2 {
+    color: white;
+}
+
+.contact .section-header h2::after {
+    background-color: white;
 }
 
 .contact-content {
@@ -552,11 +517,12 @@ research-description {
 .contact-info h3 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color: white;
 }
 
 .contact-info p {
     margin-bottom: 30px;
+    color: white;
 }
 
 .contact-details {
@@ -567,13 +533,14 @@ research-description {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    color: white;
 }
 
 .contact-item i {
     width: 40px;
     height: 40px;
     background-color: rgba(255, 255, 255, 0.2);
-    color: var(--primary-color);
+    color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -581,7 +548,7 @@ research-description {
     margin-right: 15px;
 }
 
-social-links {
+.social-links {
     display: flex;
     gap: 15px;
 }
@@ -589,8 +556,8 @@ social-links {
 .social-link {
     width: 40px;
     height: 40px;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: white;
+    color: var(--accent-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -599,16 +566,16 @@ social-links {
 }
 
 .social-link:hover {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
+    color: white;
     transform: translateY(-5px);
 }
 
 .contact-form {
     background-color: white;
-    border-left: 3px solid var(--accent-color);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -639,7 +606,6 @@ footer {
     background-color: var(--primary-color);
     color: white;
     padding: 60px 0 20px;
-    border-top: 5px solid var(--accent-color);
 }
 
 .footer-content {
