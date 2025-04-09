@@ -396,6 +396,6 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     // Initialize with the saved language or default to English
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'sq';
     setLanguage(savedLanguage);
 });
