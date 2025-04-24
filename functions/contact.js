@@ -75,7 +75,7 @@ exports.handler = async function(event, context) {
         <h3>Thank You for Your Interest!</h3>
         <p>Dear ${name},</p>
         <p>Thank you for your interest in my research paper "Smuggling as a Criminal Offense with Special Focus on the Territory of the Basic Court of Mitrovica 2008-2011".</p>
-        <p>The paper is available for purchase at a price of 50€.</p>
+        <p>The paper is available for purchase at a price of 10€.</p>
         <p>Please choose one of the following payment options:</p>
         <ul>
           <li>
